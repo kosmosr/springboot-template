@@ -9,15 +9,15 @@ import org.springframework.http.ResponseEntity;
  * @date 2018-10-25 18:38
  **/
 public class ServerResponse<T> extends ResponseEntity<T> {
-    public ServerResponse(HttpStatus status) {
+    private ServerResponse(HttpStatus status) {
         super(status);
     }
 
-    public ServerResponse(T body) {
+    private ServerResponse(T body) {
         super(body, HttpStatus.OK);
     }
 
-    public ServerResponse(T body, HttpStatus status) {
+    private ServerResponse(T body, HttpStatus status) {
         super(body, status);
     }
 

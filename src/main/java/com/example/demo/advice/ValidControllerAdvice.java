@@ -30,6 +30,6 @@ public class ValidControllerAdvice {
                     .collect(Collectors.toList());
             log.error("参数错误: {}", collect);
         }
-        return ServerResponse.errorHttp(new CodeErrorDTO<>(HttpCodeEnum.PARAMETER_ERROR));
+        return ServerResponse.errorHttp(new CodeErrorDTO<>(HttpCodeEnum.PARAMETER_ERROR, collect));
     }
 }

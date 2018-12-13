@@ -33,7 +33,7 @@ public class CommonController implements ErrorController {
         return PATH;
     }
 
-    @RequestMapping
+    @RequestMapping(produces = {"text/html", "application/json"})
     public ServerResponse handleError(HttpServletRequest request) {
         WebRequest webRequest = new ServletWebRequest(request);
         Map<String, Object> errorAttributesData = errorAttributes.getErrorAttributes(webRequest, false);
